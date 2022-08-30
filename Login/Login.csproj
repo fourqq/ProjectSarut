@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E586936B-D563-4E45-B705-6B052737B816}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Login</RootNamespace>
+    <AssemblyName>Login</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB.cs" />
+    <Compile Include="FORM_CHECK_PAYMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CHECK_PAYMENT.Designer.cs">
+      <DependentUpon>FORM_CHECK_PAYMENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_CHECK_SALE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CHECK_SALE.Designer.cs">
+      <DependentUpon>FORM_CHECK_SALE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_LOGIN.Designer.cs">
+      <DependentUpon>FORM_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_EDIT_STOCK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_EDIT_STOCK.Designer.cs">
+      <DependentUpon>FORM_EDIT_STOCK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_MAIN.Designer.cs">
+      <DependentUpon>FORM_MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PAY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_PAY.Designer.cs">
+      <DependentUpon>FORM_PAY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_CAST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CAST.Designer.cs">
+      <DependentUpon>FORM_CAST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Progarm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FORM_NEW_ACCOUNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_NEW_ACCOUNT.Designer.cs">
+      <DependentUpon>FORM_NEW_ACCOUNT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FORM_CHECK_PAYMENT.resx">
+      <DependentUpon>FORM_CHECK_PAYMENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_CHECK_SALE.resx">
+      <DependentUpon>FORM_CHECK_SALE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_LOGIN.resx">
+      <DependentUpon>FORM_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_EDIT_STOCK.resx">
+      <DependentUpon>FORM_EDIT_STOCK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_MAIN.resx">
+      <DependentUpon>FORM_MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PAY.resx">
+      <DependentUpon>FORM_PAY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_CAST.resx">
+      <DependentUpon>FORM_CAST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FORM_NEW_ACCOUNT.resx">
+      <DependentUpon>FORM_NEW_ACCOUNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\le.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pvygow64vyOXkqfLx07l-o.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fourqq png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank-transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-on-delivery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\packages.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
